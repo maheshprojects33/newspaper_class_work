@@ -1,0 +1,107 @@
+{% extends 'aznews/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main>
+    <!-- Trending Area Start -->
+    <div class="trending-area fix">
+        <div class="container">
+            <div class="trending-main">
+                <!-- Trending Scrolling Tittle -->
+
+                {% include 'aznews/trending/trending_title.html' %}
+
+                <div class="row">
+                    <!-- Left Content -->
+
+                    {% include "aznews/trending/trending_left.html" %}
+
+                    <!-- Riht content -->
+
+                    {% include 'aznews/trending/trending_right.html' %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Trending Area End -->
+
+
+    <!--   Weekly-Top-News 3 PIC Scroll start -->
+
+    {% include 'aznews/trending/weekly.html' %}
+
+    <!-- End Weekly-Top-News 3 PIC Scroll News -->
+
+
+    <!-- Whats New Start -->
+    <section class="whats-news-area pt-50 pb-20">
+        <div class="container">
+            <div class="row">
+                <!-- Whats New Left Side -->
+
+                {% include 'aznews/trending/whats_new_left.html' %}
+
+                <!-- Whats New Right Side-->
+
+                {% include 'aznews/trending/whats_new_right.html' %}
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Whats New End -->
+
+    
+    <!--   Weekly2-News start -->
+
+    {% include 'aznews/trending/weekly_two.html' %}
+    
+    <!-- End Weekly-News -->
+
+
+    <!-- Start Youtube -->
+
+    <!-- Enable this after You need-->
+    {% comment %} {% include 'aznews/trending/youtube.html' %} {% endcomment %}
+    
+    <!-- End Start youtube -->
+
+
+    <!--  Recent Articles start -->
+    
+    {% include 'aznews/trending/recent.html' %}
+    
+    <!--Recent Articles End -->
+
+
+
+    <!--Start pagination -->
+    <div class="pagination-area pb-45 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="single-wrap d-flex justify-content-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-start">
+                                <li class="page-item"><a class="page-link" href="#"><span
+                                            class="flaticon-arrow roted"></span></a></li>
+                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                <li class="page-item"><a class="page-link" href="#"><span
+                                            class="flaticon-arrow right-arrow"></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End pagination  -->
+</main>
+
+
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% load static %}
+
+
+<div class="col-lg-8">
+    <!-- Trending Top -->
+    <div class="trending-top mb-30">
+        <div class="trend-top-img">
+            <img src="{{trending_post.featured_image.url}}" alt="">
+            <div class="trend-top-cap">
+                <span>{{trending_post.category}}</span>
+                <h2><a href="details.html">{{trending_post.title}}</a></h2>
+            </div>
+        </div>
+    </div>
+    <!-- Trending Bottom -->
+    <div class="trending-bottom">
+        <div class="row">
+            {% for featured_post in featured_posts %}
+            <div class="col-lg-4">
+                <div class="single-bottom mb-35">
+                    <div class="trend-bottom-img mb-30">
+                        <img src="{{featured_post.featured_image.url}}" alt="" height="130px">
+                    </div>
+                    <div class="trend-bottom-cap">
+                        <span class="color1">{{featured_post.category}}</span>
+                        <h4><a href="{% url 'post-detail' featured_post.pk %}">{{featured_post.title|truncatechars:25}}</a></h4>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <div class="trending-bottom">
+    <div class="row">
+        {% for trending_post in trending_posts %}
+        <div class="col-lg-4">
+            <div class="single-bottom mb-35">
+                <div class="trend-bottom-img mb-30">
+                    <img src="" alt="pics" width="150px">
+                </div>
+                <div class="trend-bottom-cap">
+                    <span class="color1">{{trending_post.catgory.name}}</span>
+                    <h4><a href="details.html">{{trending_post.title}}</a></h4>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div> {% endcomment %}

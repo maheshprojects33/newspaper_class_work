@@ -1,0 +1,67 @@
+{% load static %}
+<!-- Trending Top -->
+<div class="col-lg-4">
+    {% for trending_post in trending_posts %}
+    <div class="trand-right-single d-flex">
+        <div class="trand-right-img">
+            <img src="{{trending_post.featured_image.url}}" alt="" width="100px">
+        </div>
+        <div class="trand-right-cap">
+            <span class="color1">{{trending_post.category}}</span>
+            <h4><a href="{% url 'post-detail' trending_post.pk %}">{{trending_post.title|truncatechars:20}}</a></h4>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <div class="trending-top mb-30">
+    <div class="trend-top-img">
+        <img src="{{featured_post.featured_image.url}}" alt="">
+        <div class="trend-top-cap">
+            <span>{{ featured_post.category.name }}</span>
+            <h2><a href="">{{ featured_post.title }}</a></h2>
+        </div>
+    </div>
+</div> {% endcomment %}
